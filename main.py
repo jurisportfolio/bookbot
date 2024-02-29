@@ -15,7 +15,6 @@ def get_num_words(text: str):
 def get_num_chars(text: str) -> dict:
     letter_appearance = {}
     for char in text:
-        # print(f"char {char}")
         lowered_char = char.lower()
         if not lowered_char in letter_appearance:
             letter_appearance[lowered_char] = 1
@@ -25,7 +24,6 @@ def get_num_chars(text: str) -> dict:
 
 def get_letters_to_report(text: str) -> list:
     num_chars = get_num_chars(text)
-    # print(f"num of letter {num_letters}")
     letters_to_report = []
     for char, count in num_chars.items():
         if char.isalpha():
